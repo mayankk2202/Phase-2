@@ -6,18 +6,19 @@ public class LockedMeMain {
 	public static void main(String[] args) {
 		welcomeScreen obj1 = new welcomeScreen();
 		LinkedList<String> ll1 = new LinkedList<String>();
+		StringBuffer sb = null;
 		try{
-			FileReader fr=new FileReader("FileIO");
+			FileReader fr=new FileReader("C:\\git\\EclipseWorkplace\\Phase1Project\\src\\FileIO");
 			BufferedReader br=new BufferedReader(fr);
-//			StringBuffer sb=new StringBuffer(); 
+			sb=new StringBuffer(); 
 			String line;
 			while((line=br.readLine())!=null){
 				ll1.add(line);
-//				sb.append(line); 
-//				sb.append("\n");
+				sb.append(line); 
+				sb.append("\n");
 				}
 			fr.close();
-//			System.out.println(sb.toString());
+			
 			}catch(IOException e){
 				e.printStackTrace();
 				}
@@ -28,6 +29,7 @@ public class LockedMeMain {
 //			System.out.println("exit not selected.");
 		if	(j==1) {
 			System.out.println("List of all files:");
+			System.out.println(sb.toString());
 		}else if (j==2) {
 			System.out.println("File Operations");
 		}
