@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Form</title>
+</head>
+<body>
+<Center>
+<form name=frmname method="POST" action="process">
+<table width=50% >
+</table>
+</form>
+</Center>
+</body>
+</html>
