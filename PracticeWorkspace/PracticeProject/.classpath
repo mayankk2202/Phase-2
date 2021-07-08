@@ -6,5 +6,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_291/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_291/lib/ojdbc7.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_291/lib/ojdbc14.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
