@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>ServletFilterDemo</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>com.ServletFilterDemo.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/dashboard</url-pattern>
+		<url-pattern>/profile</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<servlet-name>dashboard</servlet-name>
+		<servlet-class>com.ServletFilterDemo.AccountDashBoard</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dashboard</servlet-name>
+		<url-pattern>/dashboard</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>profile</servlet-name>
+		<servlet-class>com.ServletFilterDemo.AccountProfile</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>info</servlet-name>
+		<servlet-class>com.ServletFilterDemo.infoPage</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>profile</servlet-name>
+		<url-pattern>/profile</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>info</servlet-name>
+		<url-pattern>/info</url-pattern>
+	</servlet-mapping>
+</web-app>

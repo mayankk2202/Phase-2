@@ -1,0 +1,6 @@
+
+public class Person {
+	String Name;
+	String Address;
+	int age;
+}

@@ -1,0 +1,10 @@
+develop a multithreaded application where one thread is reading 1 line at once from a file.
+another thread calculates the length of the string and converts it into uppercase and prints on the console.
+This operation to be done line by line
+e.g.
+file1.txt
+String1
+String2 new
+String3 added new string
+thread1 will read : String1
+thread2 will calculate length & convert String1 to STRING1 and print on the console.
