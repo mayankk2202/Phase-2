@@ -5,8 +5,8 @@ public class user {
 	private String lname;
 	private String city;
 	private String email;
-	private int age;
-	private long contact;
+	private int age=0;
+	private long contact=0;
 	public String getFname() {
 		return fname;
 	}
@@ -45,7 +45,7 @@ public class user {
 	}
 	@Override
 	public String toString() {
-		return "user [fname=" + fname + ", lname=" + lname + ", city=" + city + ", email=" + email + ", age=" + age
-				+ ", contact=" + contact + "]";
+		return "user [First Name=" + fname + ", Last Name=" + lname + ", City=" + city + ", E-mail=" + email + ", Age=" + age
+				+ ", Contact Number=" + contact + "]";
 	}
 }

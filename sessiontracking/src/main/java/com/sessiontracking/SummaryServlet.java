@@ -3,6 +3,7 @@ package com.sessiontracking;
 import com.DataTransferObject.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,17 +22,20 @@ public class SummaryServlet extends HttpServlet {
 		
 		if(se != null) {
 			user u = (user) se.getAttribute("User");
-			u.setCity(request.getParameter("city"));
+			if(request.getParameter("city") != null) {
+				u.setCity(request.getParameter("city"));
+			} else u.setCity("Unkhown");
 			u.setContact(Long.parseLong(request.getParameter("cnumber")));
 			
 			PrintWriter out = response.getWriter();
+			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 			
 			out.println("<html><body><h2> Hello "+u.getFname()+u.getLname()+"</h2>");
 			out.println("<h3>Your details are as follows:<br>"+u);
 			out.println("</h3><h4><br>Your session details are:<br>"
 					+"Session ID:"+se.getId()
-					+"<br>Session Creation time:"+se.getCreationTime()
-					+"Inactive interval:"+se.getMaxInactiveInterval() +"</h4></html></body>");
+					+"<br>Session Creation time:"+ formatter.format(se.getCreationTime())
+					+"<br>Inactive interval:"+se.getMaxInactiveInterval() +"</h4></html></body>");
 			se.invalidate();
 		} else { 
 			PrintWriter out = response.getWriter();
