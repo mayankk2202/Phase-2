@@ -22,7 +22,7 @@
  		}
  	}
  %>
- <a href = index.jsp?office=Head_office>How usage of responce redirect!</a>
+ <a href = index.jsp?office=Head_office>Show me the usage of response redirect!</a>
  <br/>
  <a href = index.jsp?error=1>Show me how Error Works!</a><br>
  
